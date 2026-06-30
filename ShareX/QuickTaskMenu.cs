@@ -51,14 +51,17 @@ namespace ShareX
                 }
             };
 
-            ToolStripMenuItem tsmiContinue = new ToolStripMenuItem(Resources.QuickTaskMenu_ShowMenu_Continue);
-            tsmiContinue.Image = Resources.control;
-            tsmiContinue.Click += (sender, e) =>
+            if (Program.Settings.ShowContinueInQuickTaskMenu)
             {
-                cms.Close();
-                OnTaskInfoSelected(null);
-            };
-            cms.Items.Add(tsmiContinue);
+                ToolStripMenuItem tsmiContinue = new ToolStripMenuItem(Resources.QuickTaskMenu_ShowMenu_Continue);
+                tsmiContinue.Image = Resources.control;
+                tsmiContinue.Click += (sender, e) =>
+                {
+                    cms.Close();
+                    OnTaskInfoSelected(null);
+                };
+                cms.Items.Add(tsmiContinue);
+            }
 
             cms.Items.Add(new ToolStripSeparator());
 

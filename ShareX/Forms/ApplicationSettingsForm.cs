@@ -111,6 +111,7 @@ namespace ShareX
             cbTaskbarProgressEnabled.Enabled = TaskbarManager.IsPlatformSupported;
             cbTaskbarProgressEnabled.Checked = Program.Settings.TaskbarProgressEnabled;
             cbUseWhiteShareXIcon.Checked = Program.Settings.UseWhiteShareXIcon;
+            cbShowContinueInQuickTaskMenu.Checked = Program.Settings.ShowContinueInQuickTaskMenu;
             cbRememberMainFormPosition.Checked = Program.Settings.RememberMainFormPosition;
             cbRememberMainFormSize.Checked = Program.Settings.RememberMainFormSize;
 
@@ -446,6 +447,11 @@ namespace ShareX
         private void btnEditQuickTaskMenu_Click(object sender, EventArgs e)
         {
             new QuickTaskMenuEditorForm().ShowDialog();
+        }
+
+        private void cbShowContinueInQuickTaskMenu_CheckedChanged(object sender, EventArgs e)
+        {
+            Program.Settings.ShowContinueInQuickTaskMenu = cbShowContinueInQuickTaskMenu.Checked;
         }
 
         private void cbAutoCheckUpdate_CheckedChanged(object sender, EventArgs e)

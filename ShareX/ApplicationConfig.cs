@@ -74,6 +74,7 @@ namespace ShareX
 
         public bool AutoCheckUpdate = true;
         public UpdateChannel UpdateChannel = UpdateChannel.Release;
+        public bool ShowContinueInQuickTaskMenu = true;
         // TEMP: For backward compatibility
         public bool CheckPreReleaseUpdates = false;
 

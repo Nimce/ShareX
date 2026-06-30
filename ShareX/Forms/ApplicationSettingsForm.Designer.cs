@@ -46,6 +46,7 @@ namespace ShareX
             this.lblTrayLeftClickAction = new System.Windows.Forms.Label();
             this.btnEditQuickTaskMenu = new System.Windows.Forms.Button();
             this.cbShowTray = new System.Windows.Forms.CheckBox();
+            this.cbShowContinueInQuickTaskMenu = new System.Windows.Forms.CheckBox();
             this.cbTrayIconProgressEnabled = new System.Windows.Forms.CheckBox();
             this.btnLanguages = new ShareX.HelpersLib.MenuButton();
             this.cmsLanguages = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -257,6 +258,7 @@ namespace ShareX
             this.tpGeneral.Controls.Add(this.cbTaskbarProgressEnabled);
             this.tpGeneral.Controls.Add(this.cbRememberMainFormSize);
             this.tpGeneral.Controls.Add(this.lblLanguage);
+            this.tpGeneral.Controls.Add(this.cbShowContinueInQuickTaskMenu);
             resources.ApplyResources(this.tpGeneral, "tpGeneral");
             this.tpGeneral.Name = "tpGeneral";
             // 
@@ -327,6 +329,13 @@ namespace ShareX
             resources.ApplyResources(this.cbTrayLeftClickAction, "cbTrayLeftClickAction");
             this.cbTrayLeftClickAction.Name = "cbTrayLeftClickAction";
             this.cbTrayLeftClickAction.SelectedIndexChanged += new System.EventHandler(this.cbTrayLeftClickAction_SelectedIndexChanged);
+            //
+            // cbShowContinueInQuickTaskMenu
+            // 
+            resources.ApplyResources(this.cbShowContinueInQuickTaskMenu, "cbShowContinueInQuickTaskMenu");
+            this.cbShowContinueInQuickTaskMenu.Name = "cbShowContinueInQuickTaskMenu";
+            this.cbShowContinueInQuickTaskMenu.UseVisualStyleBackColor = true;
+            this.cbShowContinueInQuickTaskMenu.CheckedChanged += new System.EventHandler(this.cbShowContinueInQuickTaskMenu_CheckedChanged);
             // 
             // lblTrayLeftClickAction
             // 
@@ -1640,5 +1649,6 @@ namespace ShareX
         private System.Windows.Forms.CheckBox cbAutoCheckUpdate;
         private System.Windows.Forms.ComboBox cbUpdateChannel;
         private System.Windows.Forms.Label lblUpdateChannel;
+        private System.Windows.Forms.CheckBox cbShowContinueInQuickTaskMenu;
     }
 }

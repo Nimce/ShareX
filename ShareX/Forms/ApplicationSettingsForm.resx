@@ -181,7 +181,7 @@
     <value>177, 17</value>
   </data>
   <data name="cbAutoCheckUpdate.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
+    <value>17</value>
   </data>
   <data name="cbAutoCheckUpdate.Text" xml:space="preserve">
     <value>Automatically check for updates</value>
@@ -4114,5 +4114,29 @@
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cbShowContinueInQuickTaskMenu.Location" type="System.Drawing.Point, System.Drawing">
+    <value>310, 221</value>
+  </data>
+  <data name="cbShowContinueInQuickTaskMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>226, 24</value>
+  </data>
+  <data name="cbShowContinueInQuickTaskMenu.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="cbShowContinueInQuickTaskMenu.Text" xml:space="preserve">
+    <value>Show &quot;Continue&quot; in Quick task menu</value>
+  </data>
+  <data name="&gt;&gt;cbShowContinueInQuickTaskMenu.Name" xml:space="preserve">
+    <value>cbShowContinueInQuickTaskMenu</value>
+  </data>
+  <data name="&gt;&gt;cbShowContinueInQuickTaskMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbShowContinueInQuickTaskMenu.Parent" xml:space="preserve">
+    <value>tpGeneral</value>
+  </data>
+  <data name="&gt;&gt;cbShowContinueInQuickTaskMenu.ZOrder" xml:space="preserve">
+    <value>20</value>
   </data>
 </root>

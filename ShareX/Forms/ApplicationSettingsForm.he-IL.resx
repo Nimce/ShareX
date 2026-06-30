@@ -186,6 +186,9 @@
   <data name="btnEditQuickTaskMenu.Text" xml:space="preserve">
     <value>ערוך תפריט משימות מהיר...</value>
   </data>
+  <data name="cbShowContinueInQuickTaskMenu.Text" xml:space="preserve">
+    <value>הצג &quot;המשך&quot; בתפריט המשימות המהיר</value>
+  </data>
   <data name="btnClipboardFormatEdit.Text" xml:space="preserve">
     <value>ערוך...</value>
   </data>

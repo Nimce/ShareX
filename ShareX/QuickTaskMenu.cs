@@ -61,9 +61,9 @@ namespace ShareX
                     OnTaskInfoSelected(null);
                 };
                 cms.Items.Add(tsmiContinue);
-            }
 
-            cms.Items.Add(new ToolStripSeparator());
+                cms.Items.Add(new ToolStripSeparator());
+            }
 
             if (Program.Settings != null && Program.Settings.QuickTaskPresets != null && Program.Settings.QuickTaskPresets.Count > 0)
             {

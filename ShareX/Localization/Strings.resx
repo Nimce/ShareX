@@ -391,6 +391,9 @@
   <data name="ApplicationSettingsWindow_Cancel" xml:space="preserve">
     <value>Cancel</value>
   </data>
+  <data name="ApplicationSettingsWindow_ShowContinueInQuickTaskMenu" xml:space="preserve">
+    <value>Show &quot;Continue&quot; in Quick task menu</value>
+  </data>
   <data name="ApplicationSettingsWindow_ChangesToThePersonalFolderAreStoredImmediatelyAndTakeEffectAfterRestart" xml:space="preserve">
     <value>Changes to the personal folder are stored immediately and take effect after restart.</value>
   </data>

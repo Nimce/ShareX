@@ -163,6 +163,9 @@
   <data name="AfterCaptureWindow_Cancel" xml:space="preserve">
     <value>ביטול</value>
   </data>
+  <data name="ApplicationSettingsWindow_ShowContinueInQuickTaskMenu" xml:space="preserve">
+    <value>הצג &quot;המשך&quot; בתפריט המשימות המהיר</value>
+  </data>
   <data name="AfterCaptureWindow_Continue" xml:space="preserve">
     <value>המשך</value>
   </data>

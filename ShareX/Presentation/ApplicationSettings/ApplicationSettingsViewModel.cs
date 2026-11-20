@@ -761,6 +761,7 @@ public sealed class ApplicationSettingsViewModel : INotifyPropertyChanged, IDisp
     public bool WorkflowsOnlyShowEdited { get => Settings.WorkflowsOnlyShowEdited; set => SetSetting(Settings.WorkflowsOnlyShowEdited, value, x => Settings.WorkflowsOnlyShowEdited = x); }
     public bool TrayAutoExpandCaptureMenu { get => Settings.TrayAutoExpandCaptureMenu; set => SetSetting(Settings.TrayAutoExpandCaptureMenu, value, x => Settings.TrayAutoExpandCaptureMenu = x); }
     public string BrowserPath { get => Settings.BrowserPath ?? string.Empty; set => SetSetting(Settings.BrowserPath, value, x => Settings.BrowserPath = x); }
+    public bool ShowContinueInQuickTaskMenu { get => Settings.ShowContinueInQuickTaskMenu; set => SetSetting(Settings.ShowContinueInQuickTaskMenu, value, x => Settings.ShowContinueInQuickTaskMenu = x); }
     public bool SaveSettingsAfterTaskCompleted { get => Settings.SaveSettingsAfterTaskCompleted; set => SetSetting(Settings.SaveSettingsAfterTaskCompleted, value, x => Settings.SaveSettingsAfterTaskCompleted = x); }
     public bool DevMode { get => Settings.DevMode; set => SetSetting(Settings.DevMode, value, x => Settings.DevMode = x); }
 

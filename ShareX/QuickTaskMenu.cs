@@ -62,11 +62,16 @@ public sealed class QuickTaskMenu
         CloseMenu();
 
         ContextMenu menu = new();
+
         MenuItem continueItem = CreateActionItem(Strings.QuickTaskMenu_ShowMenu_Continue,
             AppIcons.CirclePlay, () => OnTaskInfoSelected(null));
-        menu.Items.Add(continueItem);
-        menu.Items.Add(new Separator());
 
+        if (ApplicationState.SettingsOrNull?.ShowContinueInQuickTaskMenu == true)
+        {
+            menu.Items.Add(continueItem);
+            menu.Items.Add(new Separator());
+        }
+        
         if (ApplicationState.SettingsOrNull?.QuickTaskPresets is { Count: > 0 } presets)
         {
             foreach (QuickTaskInfo taskInfo in presets)
@@ -131,24 +136,32 @@ public sealed class QuickTaskMenu
                 e.Handled = true;
             }
         }, RoutingStrategies.Tunnel);
-        menu.Loaded += (_, _) =>
-        {
-            Point? continueCenter = continueItem.TranslatePoint(
-                new Point(continueItem.Bounds.Width / 2, continueItem.Bounds.Height / 2), menu);
 
-            if (menu.Parent is Popup popup && continueCenter is Point center)
+        if (ApplicationState.SettingsOrNull?.ShowContinueInQuickTaskMenu == true)
+        {
+            menu.Loaded += (_, _) =>
             {
-                popup.HorizontalOffset = -center.X;
-                popup.VerticalOffset = -center.Y;
-            }
-        };
+                Point? continueCenter = continueItem.TranslatePoint(
+                    new Point(continueItem.Bounds.Width / 2, continueItem.Bounds.Height / 2), menu);
+
+                if (menu.Parent is Popup popup && continueCenter is Point center)
+                {
+                    popup.HorizontalOffset = -center.X;
+                    popup.VerticalOffset = -center.Y;
+                }
+            };
+        }
+
         menu.Closed += (_, _) => ClosePlacementWindow(menu, placementWindow);
         placementWindow.Closed += (_, _) => CloseContextMenu(menu, placementWindow);
         placementWindow.Show();
         placementWindow.Position = placementPosition;
         placementWindow.Activate();
         menu.Open(placementWindow);
-        Dispatcher.UIThread.Post(() => continueItem.Focus(), DispatcherPriority.Input);
+        if (ApplicationState.SettingsOrNull?.ShowContinueInQuickTaskMenu == true)
+        {
+            Dispatcher.UIThread.Post(() => continueItem.Focus(), DispatcherPriority.Input);
+        }
     }
 
     private MenuItem CreateActionItem(string header, string? icon, Action? action)

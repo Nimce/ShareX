@@ -68,6 +68,8 @@ namespace ShareX
         public bool RememberMainFormSize = false;
         public Size MainFormSize = Size.Empty;
 
+        public bool ShowContinueInQuickTaskMenu = true;
+
         public HotkeyType TrayLeftClickAction = HotkeyType.RectangleRegion;
         public HotkeyType TrayLeftDoubleClickAction = HotkeyType.OpenMainWindow;
         public HotkeyType TrayMiddleClickAction = HotkeyType.ClipboardUploadWithContentViewer;

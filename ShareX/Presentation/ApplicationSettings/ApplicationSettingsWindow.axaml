@@ -698,6 +698,9 @@
                                         <TextBox Grid.Column="1" Classes="form-control" Text="{Binding BrowserPath, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
                                     </Grid>
                                     <StackPanel>
+                                        <CheckBox Classes="setting" Content="{x:Static res:Strings.ApplicationSettingsWindow_ShowContinueInQuickTaskMenu}" IsChecked="{Binding ShowContinueInQuickTaskMenu, Mode=TwoWay}"/>
+                                    </StackPanel>
+                                    <StackPanel>
                                         <CheckBox Classes="setting" Content="{x:Static res:Strings.ApplicationSettingsWindow_SaveSettingsAfterTaskCompleted}" IsChecked="{Binding SaveSettingsAfterTaskCompleted, Mode=TwoWay}"/>
                                     </StackPanel>
                                     <StackPanel>
